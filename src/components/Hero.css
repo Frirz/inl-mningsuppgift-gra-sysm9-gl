@@ -1,0 +1,45 @@
+.hero {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-text {
+    top: 50%;
+    left: 15%;
+    right: 15%;
+    padding: 12px;
+    position: absolute;
+    color: #D9D9D9;
+    font-size: 18px;
+}
+
+.hero-text h2 {
+    margin-bottom: 0;
+}
+
+.hero-text h1 {
+    margin-top: 0;
+}
+
+.link{
+    padding: 18px;
+    text-decoration: none;
+    color: #D9D9D9;
+    font-family: 'Playfair Display SC', serif;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: #A26769;
+    border-radius: 6px;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
