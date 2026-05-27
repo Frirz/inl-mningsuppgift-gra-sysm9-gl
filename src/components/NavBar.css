@@ -1,5 +1,5 @@
 nav {
-    position: fixed;
+    position: absolute;
     top: 5%;
     left: 15%;
     right: 15%;
@@ -9,9 +9,8 @@ nav {
     padding: 20px 90px;
     background-color: rgba(209, 202, 186, 0.8);
     border-radius: 10px;
+    z-index: 100;
 
-/* NAVBAR STANNAR PGA DENNA TA BORT SEN FÖR ATT DEN SKA RÖRA SIG MED*/
-    position: absolute;
 }
 
 ul {

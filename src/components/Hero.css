@@ -1,7 +1,6 @@
 .hero {
     width: 100%;
     height: 100vh;
-    overflow: hidden;
 }
 
 .hero img {
@@ -12,7 +11,7 @@
 
 .hero-text {
     top: 50%;
-    left: 15%;
+    left: 20%;
     right: 15%;
     padding: 12px;
     position: absolute;
