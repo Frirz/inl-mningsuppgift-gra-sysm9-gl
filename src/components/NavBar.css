@@ -13,9 +13,16 @@ nav {
 
 }
 
+.logo a{
+    cursor: pointer;
+    text-decoration: none;
+ color: #2B2B2B;
+}
+
 ul {
     list-style-type: none;
     display: flex;
+     
 }
 
 li a {

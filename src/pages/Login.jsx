@@ -1,27 +1,17 @@
 import { Link } from 'react-router-dom'
-import Navbar from '../components/NavBar'
-import Footer from '../components/Footer'
+import './Login.css'
 
 function Login() {
   return (
-    <div>
-      <Navbar />
-      <main className="page-section">
-        <h2>Login</h2>
-        <form>
-          <label>
-            Email
-            <input type="email" name="email" autoComplete="email" />
-          </label>
-          <label>
-            Password
-            <input type="password" name="password" autoComplete="current-password" />
-          </label>
-          <button type="submit">Login</button>
-        </form>
-        <Link to="/register">Create account</Link>
-      </main>
-      <Footer />
+    <div className="login-page">
+      <h1>Välkommen</h1>
+      <div className="login-form">
+        <input type="text" placeholder="Namn" />
+        <input type="password" placeholder="Lösenord" />
+        <button className="login-btn">Logga in</button>
+        <p>Har du inget konto? <Link to="/register">Registrera dig</Link></p>
+        <p><Link to="/">Gå tillbaka</Link></p>
+      </div>
     </div>
   )
 }
