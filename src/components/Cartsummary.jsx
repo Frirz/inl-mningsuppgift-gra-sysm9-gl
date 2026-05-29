@@ -1,4 +1,5 @@
 import './CartSummary.css'
+import { Link } from 'react-router-dom'
 
 function CartSummary() {
   return (
@@ -15,17 +16,9 @@ function CartSummary() {
         <span>Totalsumma inkl. moms</span>
         <span>220,00 kr</span>
       </div>
-      <button className="checkout-btn">Gå till kassan</button>
-      <p className="accepts">Vi accepterar</p>
-      <div className="payment-icons">
-        <span>Swish</span>
-        <span>Klarna</span>
-        <span>VISA</span>
-        <span>Mastercard</span>
-        <span>Apple Pay</span>
-        <span>PayPal</span>
+      <Link to="/Checkout">Gå till kassan</Link>
       </div>
-    </div>
+    
   )
 }
 
