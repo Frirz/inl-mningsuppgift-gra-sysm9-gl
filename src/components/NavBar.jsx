@@ -7,6 +7,7 @@ function Navbar() {
       <h1 className="logo"><Link to="/">Ellis Art & Tattoo</Link></h1>
 
       <ul>
+        <li><Link to="/products">Products</Link></li>
         <li><Link to="/cart">Cart</Link></li>
         <li><Link to="/login">Login</Link></li>
       </ul>
