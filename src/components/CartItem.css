@@ -1,0 +1,36 @@
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: rgba(209, 202, 186, 0.8);
+  border-radius: 8px;
+}
+
+.cart-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.cart-item-info h3 {
+  margin: 0;
+  font-style: italic;
+  color: #A26769;
+}
+
+.cart-item-info p {
+  margin: 4px 0 0;
+  font-style: italic;
+  color: #A26769;
+}
+
+.cart-item-quantity select {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+}

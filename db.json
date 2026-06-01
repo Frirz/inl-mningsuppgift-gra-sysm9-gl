@@ -1,0 +1,12 @@
+{
+  "products": [
+    { "id": 1, "name": "Big Sticker", "price": 99, "category": "Big Stickers", "image": "src/images/img2.png" },
+    { "id": 2, "name": "Big Sticker 2", "price": 99, "category": "Big Stickers", "image": "src/images/img2.png" },
+    { "id": 3, "name": "Big Sticker 3", "price": 199, "category": "Big Stickers", "image": "src/images/img1.png" },
+    { "id": 4, "name": "Smal Sticker 1", "price": 199, "category": "Smal Stickers", "image": "src/images/img1.png" },
+    { "id": 5, "name": "Smal Sticker 2", "price": 299, "category": "Smal Stickers", "image": "src/images/img2.png" },
+    { "id": 6, "name": "Smal Sticker 3", "price": 299, "category": "Smal Stickers", "image": "src/images/img2.png" }
+  ],
+  "orders": [],
+  "users": []
+}
