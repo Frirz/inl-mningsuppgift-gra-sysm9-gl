@@ -1,0 +1,40 @@
+nav {
+    position: absolute;
+    top: 5%;
+    left: 15%;
+    right: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 90px;
+    background-color: rgba(209, 202, 186, 0.8);
+    border-radius: 10px;
+    z-index: 100;
+
+}
+
+.logo a{
+    cursor: pointer;
+    text-decoration: none;
+ color: #2B2B2B;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+     
+}
+
+li a {
+    padding: 12px;
+    text-decoration: none;
+    color: #2B2B2B;
+    font-family: 'Playfair Display SC', serif;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+li a:hover {
+    text-decoration: underline;
+}

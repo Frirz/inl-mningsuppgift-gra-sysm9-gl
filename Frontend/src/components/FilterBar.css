@@ -1,0 +1,25 @@
+.product-filter {
+  display: flex;
+  gap: 12px;
+  padding: 20px 0;
+  background-color: rgba(209, 202, 186, 0.8);
+}
+
+.filter-btn {
+  padding: 10px 20px;
+  border: 2px solid #2B2B2B;
+  background: transparent;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: 'Playfair Display SC', serif;
+  font-size: 14px;
+}
+
+.filter-btn.active {
+  background-color: #2B2B2B;
+  color: white;
+}
+
+.filter-btn:hover {
+  background-color: rgba(162, 103, 105, 0.2);
+}
