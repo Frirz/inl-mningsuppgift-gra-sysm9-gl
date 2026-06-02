@@ -3,21 +3,18 @@ import Navbar from '../components/NavBar'
 import Footer from '../components/Footer'
 import ProductCard from '../components/ProductCard'
 import ProductFilter from '../components/FilterBar'
+import { getProducts } from '../services/api'
 import './Products.css'
 
 function Products() {
   const [products, setProducts] = useState([])
   const [activeFilter, setFilter] = useState('Alla')
 
- useEffect(() => {
-  fetch('http://localhost:3000/api/products')
-    .then(res => res.json())
-    .then(data => {
-      console.log(data)
-      setProducts(data)
-    })
-    .catch(err => console.error(err))
-}, [])
+  useEffect(() => {
+    getProducts()
+      .then(data => setProducts(data))
+      .catch(err => console.error(err))
+  }, [])
 
   const filteredProducts = activeFilter === 'Alla'
     ? products
