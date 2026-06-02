@@ -10,7 +10,7 @@ function Products() {
   const [activeFilter, setFilter] = useState('Alla')
 
  useEffect(() => {
-  fetch('http://localhost:3001/products')
+  fetch('http://localhost:3000/api/products')
     .then(res => res.json())
     .then(data => {
       console.log(data)
@@ -31,7 +31,7 @@ function Products() {
         <ProductFilter activeFilter={activeFilter} setFilter={setFilter} />
         <div className="products-grid">
           {filteredProducts.map(product => (
-            <ProductCard key={product.id} product={product} />
+            <ProductCard key={product._id} product={product} />
           ))}
         </div>
       </div>
