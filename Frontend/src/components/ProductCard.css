@@ -4,6 +4,27 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+
+.favorite-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #A26769;
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.favorite-btn.active {
+  background-color: #A26769;
+  color: white;
 }
 
 .product-card img {

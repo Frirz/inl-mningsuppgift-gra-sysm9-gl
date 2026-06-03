@@ -23,3 +23,14 @@
 .filter-btn:hover {
   background-color: rgba(162, 103, 105, 0.2);
 }
+
+@media (max-width: 600px) {
+  .product-filter {
+    flex-wrap: wrap;
+  }
+
+  .filter-btn {
+    flex: 1 1 calc(50% - 12px);
+    padding: 10px 12px;
+  }
+}

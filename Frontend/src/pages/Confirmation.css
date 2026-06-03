@@ -69,3 +69,24 @@
   border-radius: 8px;
   font-weight: 700;
 }
+
+.confirmation-link {
+  color: #2B2B2B;
+  font-weight: 700;
+}
+
+@media (max-width: 800px) {
+  .confirmation-page {
+    padding: 190px 6% 32px;
+  }
+
+  .confirmation-item {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .confirmation-item img {
+    width: 100%;
+    height: 180px;
+  }
+}

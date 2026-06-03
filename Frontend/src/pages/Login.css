@@ -51,3 +51,18 @@
 .login-form a {
   color: #A26769;
 }
+
+@media (max-width: 700px) {
+  .login-page {
+    margin: 190px 6% 40px;
+    padding: 28px 20px;
+  }
+
+  .login-page h1 {
+    font-size: 2.2rem;
+  }
+
+  .login-form {
+    width: 100%;
+  }
+}

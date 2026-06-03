@@ -2,6 +2,7 @@ const asyncHandler = require("express-async-handler");
 const Order = require("../models/orderModels");
 
 const createOrder = asyncHandler(async (req, res) => {
+    
     const { items, totalPrice, paymentMethod } = req.body;
 
     if (!items || !totalPrice || !paymentMethod) {

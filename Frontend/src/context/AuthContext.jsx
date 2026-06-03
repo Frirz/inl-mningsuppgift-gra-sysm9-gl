@@ -3,13 +3,24 @@ import { loginUser, registerUser } from '../services/api'
 
 const AuthContext = createContext()
 
+function getStoredUser() {
+  try {
+    const storedUser = localStorage.getItem('user')
+    return storedUser ? JSON.parse(storedUser) : null
+  } catch {
+    return null
+  }
+}
+
 export function AuthProvider({ children }) {
-  const [user, setUser] = useState(null)
+  const [user, setUser] = useState(getStoredUser)
 
   const login = async (formData) => {
     const data = await loginUser(formData)
+    const loggedInUser = { name: data.name, email: data.email }
     localStorage.setItem('token', data.accessToken)
-    setUser({ name: data.name, email: data.email })
+    localStorage.setItem('user', JSON.stringify(loggedInUser))
+    setUser(loggedInUser)
     return data
   }
 
@@ -20,6 +31,7 @@ export function AuthProvider({ children }) {
 
   const logout = () => {
     localStorage.removeItem('token')
+    localStorage.removeItem('user')
     setUser(null)
   }
 

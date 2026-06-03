@@ -7,6 +7,8 @@ import Checkout from './pages/Checkout'
 import Confirmation from './pages/Confirmation'
 import Login from './pages/Login'
 import Register from './pages/Register'
+import Orders from './pages/Orders'
+import Favorites from './pages/Favorites'
 
 function App() {
 
@@ -18,6 +20,8 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/confirmation" element={<Confirmation />} />
+        <Route path="/orders" element={<Orders />} />
+        <Route path="/favorites" element={<Favorites />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
       </Routes>

@@ -32,7 +32,7 @@ function Register() {
         {error && <p className="error">{error}</p>}
         <button className="register-btn" onClick={handleSubmit}>Registrera</button>
         <p>Har du redan ett konto? <Link to="/login">Logga in</Link></p>
-         <p><Link to="/">Gå tillbaka</Link></p>
+        <p><Link to="/">gå tillbaka</Link></p>
       </div>
     </div>
   )

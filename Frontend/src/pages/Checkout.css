@@ -32,6 +32,24 @@
   width: 200px;
 }
 
+.payment-options {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.payment-options label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.swish-info {
+  max-width: 260px;
+  margin: 0;
+  line-height: 1.5;
+}
+
 .pay-btn {
   padding: 12px 40px;
   background-color: rgba(162, 103, 105, 0.9);
@@ -50,4 +68,40 @@
   text-decoration: none;
   color: #2B2B2B;
   font-size: 14px;
+}
+
+.error {
+  color: #8F2D2D;
+  font-weight: 700;
+}
+
+@media (max-width: 800px) {
+  .checkout-page {
+    min-height: auto;
+    padding: 190px 6% 40px;
+    justify-content: flex-start;
+  }
+
+  .checkout-form {
+    width: 100%;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .form-left,
+  .form-right {
+    width: 100%;
+  }
+
+  .form-left input,
+  .form-right input {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .pay-btn,
+  .back-link {
+    width: 100%;
+    max-width: 320px;
+  }
 }

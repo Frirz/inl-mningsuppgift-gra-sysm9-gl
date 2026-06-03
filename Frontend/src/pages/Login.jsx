@@ -32,14 +32,11 @@ function Login() {
           {error && <p className="error">{error}</p>}
           <button className="login-btn" onClick={handleSubmit}>Logga in</button>
           <p>Har du inget konto? <Link to="/register">Registrera dig</Link></p>
+          <p><Link to="/">gå tillbaka</Link></p>
         </div>
       </div>
-       <p>
-          <Link to="/">Gå tillbaka</Link>
-        </p>
     </div>
   )
 }
 
 export default Login
-       
