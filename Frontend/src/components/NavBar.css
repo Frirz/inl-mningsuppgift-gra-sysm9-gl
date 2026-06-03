@@ -10,21 +10,31 @@ nav {
     background-color: rgba(209, 202, 186, 0.8);
     border-radius: 10px;
     z-index: 100;
-
 }
 
-.logo a{
+.nav-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    margin: 0;
+}
+
+.logo a {
     cursor: pointer;
     text-decoration: none;
- color: #2B2B2B;
+    color: #2B2B2B;
 }
 
-ul {
+.nav-menu {
     list-style-type: none;
     display: flex;
     align-items: center;
     gap: 4px;
-     
+    padding: 0;
+    margin: 0;
 }
 
 li a,
@@ -45,33 +55,75 @@ li a:hover,
     text-decoration: underline;
 }
 
-@media (max-width: 1050px) {
+.menu-btn {
+    display: none;
+    width: 42px;
+    height: 42px;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.menu-btn span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    margin: 5px 0;
+    background-color: #2B2B2B;
+    border-radius: 2px;
+}
+
+@media (max-width: 900px) {
     nav {
-        top: 20px;
-        left: 6%;
-        right: 6%;
-        padding: 16px 22px;
-        flex-direction: column;
-        gap: 12px;
+        top: 16px;
+        left: 5%;
+        right: 5%;
+        display: block;
+        padding: 14px 18px;
+    }
+
+    .nav-top {
+        width: 100%;
     }
 
     .logo {
-        margin: 0;
-        text-align: center;
-        font-size: 1.4rem;
+        font-size: 1.25rem;
     }
 
-    ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 0;
-        margin: 0;
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 6px;
+        padding-top: 14px;
+    }
+
+    .nav-menu.open {
+        display: flex;
+    }
+
+    .nav-menu li {
+        width: 100%;
     }
 
     li a,
     .nav-link {
         display: block;
-        padding: 8px 10px;
-        font-size: 14px;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px 4px;
+        text-align: center;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 420px) {
+    .logo {
+        font-size: 1rem;
     }
 }
