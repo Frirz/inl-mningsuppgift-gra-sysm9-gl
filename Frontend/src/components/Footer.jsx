@@ -14,8 +14,7 @@ function Footer() {
   </div>
 </div>
       <div className = "footer-mid">
-        <h1>ELLIS ART & TATTOO</h1>
-        {/* img instagram,facebook logo */}
+        <h3>ELLIS ART & TATTOO</h3>
       </div>
       <div className="footer-right">
         <p>PRIVACY POLICY</p>

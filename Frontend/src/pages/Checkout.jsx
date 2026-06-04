@@ -84,7 +84,7 @@ function Checkout() {
           <div className="form-right">
             <label>Betalningsmetod</label>
             <div className="payment-options">
-              <label>
+              <label className={`payment-card ${formData.paymentMethod === 'kort' ? 'selected' : ''}`}>
                 <input
                   type="radio"
                   name="paymentMethod"
@@ -92,9 +92,10 @@ function Checkout() {
                   checked={formData.paymentMethod === 'kort'}
                   onChange={handleChange}
                 />
-                Kontokort
+                <span className="payment-icon">💳</span>
+                <span>Kontokort</span>
               </label>
-              <label>
+              <label className={`payment-card ${formData.paymentMethod === 'swish' ? 'selected' : ''}`}>
                 <input
                   type="radio"
                   name="paymentMethod"
@@ -102,7 +103,8 @@ function Checkout() {
                   checked={formData.paymentMethod === 'swish'}
                   onChange={handleChange}
                 />
-                Swish
+                <span className="payment-icon">📱</span>
+                <span>Swish</span>
               </label>
             </div>
 
@@ -114,7 +116,7 @@ function Checkout() {
                 <input type="text" name="cardNumber" placeholder="XXXX" maxLength={4} onChange={handleChange} />
               </>
             ) : (
-              <p className="swish-info">Betalningen skickas som en simulerad Swish-betalning till ditt mobilnummer.</p>
+              <input type="text" name="swishInfo" value="Betala till 0701234567" readOnly className="swish-info" />
             )}
           </div>
         </div>

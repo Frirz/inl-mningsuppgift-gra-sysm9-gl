@@ -1,6 +1,6 @@
 import './FilterBar.css'
 
-const kategorier = ['Alla', 'Big Stickers', 'Smal Stickers']
+const kategorier = ['Alla', 'Big Tattoo', 'Smal Tattoo']
 
 function FilterBar({ activeFilter, setFilter }) {
   return (

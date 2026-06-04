@@ -1,0 +1,146 @@
+# Ellis Art & Tattoo – E-handelsapplikation
+
+Ellis Art & Tattoo är en fullstack e-handelsapplikation för fake tattoos. Användaren kan bläddra bland produkter, filtrera på kategori, lägga till produkter i varukorgen, spara favoriter, registrera ett konto, logga in och genomföra en simulerad betalning. Efter köp visas en orderbekräftelse och användaren kan se sina tidigare beställningar.
+
+---
+
+## Mappstruktur
+
+```
+GRSUV/
+├── Frontend/               # React-applikation
+│   ├── public/             # Statiska filer (bilder)
+│   ├── src/
+│   │   ├── components/     # Återanvändbara komponenter (Navbar, Footer, CartItem osv.)
+│   │   ├── context/        # Global state (AuthContext, CartContext, FavoriteContext)
+│   │   ├── images/         # Bilder
+│   │   ├── pages/          # Sidor (Home, Products, Cart, Checkout osv.)
+│   │   ├── services/       # API-anrop till backend (api.js)
+│   │   ├── App.jsx         # Routing
+│   │   └── main.jsx        # Startpunkt för React
+│   └── package.json
+│
+├── Backend/                # Node.js + Express server
+│   ├── config/
+│   │   └── dbConnection.js
+│   ├── controllers/
+│   │   ├── orderController.js
+│   │   ├── productController.js
+│   │   └── userController.js
+│   ├── middleware/
+│   │   └── validateTokenHandler.js
+│   ├── models/
+│   │   ├── orderModels.js
+│   │   ├── productModels.js
+│   │   └── userModels.js
+│   ├── routes/
+│   │   ├── orderRoutes.js
+│   │   ├── productRoutes.js
+│   │   └── userRoutes.js
+│   ├── .env.example
+│   ├── seed.js
+│   └── server.js
+│
+└── README.md
+```
+
+---
+
+## Krav
+
+- [Node.js] (version 18 eller senare)
+- [MongoDB Atlas]
+
+---
+
+## Starta backend
+
+### 1. Gå till Backend-mappen
+
+```bash
+cd Backend
+```
+
+### 2. Installera paket
+
+```bash
+npm install
+```
+
+### 3. Fyll i .env-fil
+
+Öppna `.env` och fyll i dina egna värden eller de värden jag har skickat in via dokument:
+
+```
+CONNECTION_STRING=din-mongodb-atlas-connection-string
+ACCESS_TOKEN_SECRET=valfri-hemlig-nyckel
+PORT=3000
+```
+
+> **CONNECTION_STRING** hittar du i dokumentet som är inlämnat på newton.
+> **ACCESS_TOKEN_SECRET** kan vara vad som helst, t.ex. "hemlig-nyckel" men har även skickat med den jag använt.
+
+### 4. Lägg in produkter i databasen
+
+```bash
+node seed.js
+```
+
+### 5. Starta servern
+
+```bash
+npm run dev
+```
+
+Backend körs nu på `http://localhost:3000`
+
+---
+
+## Starta frontend
+
+Öppna en **ny terminal** och kör:
+
+### 1. Gå till Frontend-mappen
+
+```bash
+cd Frontend
+```
+
+### 2. Installera paket
+
+```bash
+npm install
+```
+
+### 3. Starta applikationen
+
+```bash
+npm run dev
+```
+
+Frontend körs nu på `http://localhost:5173` – öppna den i webbläsaren.
+
+> **OBS:** Backend måste köra samtidigt som frontend. Ha alltså två terminaler öppna!
+
+---
+
+## Testkonto
+
+| Fält     | Värde    |
+| -------- | -------- |
+| Email    | user     |
+| Lösenord | password |
+
+---
+
+## API-endpoints
+
+| Method | Endpoint            | Åtkomst | Beskrivning              |
+| ------ | ------------------- | ------- | ------------------------ |
+| GET    | /api/products       | Public  | Hämta alla produkter     |
+| GET    | /api/products/:id   | Public  | Hämta en produkt         |
+| POST   | /api/users/register | Public  | Registrera användare     |
+| POST   | /api/users/login    | Public  | Logga in                 |
+| GET    | /api/users/current  | Private | Hämta inloggad användare |
+| POST   | /api/orders         | Private | Skapa order              |
+| GET    | /api/orders         | Private | Hämta mina orders        |

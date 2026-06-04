@@ -28,6 +28,7 @@ footer {
     align-items: flex-start;
     gap: 40px;
     padding: 20px 40px;
+     font-weight: 700;
 }
 
 .footer-mid {
@@ -46,6 +47,7 @@ footer {
     align-items: flex-start;
     padding: 20px 40px;
     gap: 0;
+     font-weight: 700;
 }
 
 .footer-right p {
